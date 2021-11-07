@@ -33,16 +33,14 @@ export const updateUser = async (req, res, next) => {
   const { gender, name, location, email, login, dob, phone, nat } = req.body;
 
   try {
-    const getById = await PostUser.findOne({ _id: userId });
+    const getById = await PostUser.findById(userId);
 
-    const updatedUser = await PostUser.updateOne(getById,
-      { gender, name, location, email, login, dob, phone, nat }
-      , { new: true });
+    const updatedUser = await PostUser.findOneAndUpdate({ _id: userId });
 
     res.status(200).json(updatedUser);
 
   } catch (error) {
-    res.status(401).json({ message: error.message });
+    res.status(404).json({ message: error.message });
   }
   next()
 };
@@ -50,7 +48,7 @@ export const updateUser = async (req, res, next) => {
 export const deleteUser = async (req, res, next) => {
   const { userId } = req.params;
   try {
-    const deleteUser = await PostUser.findOneAndRemove({ _id: userId });
+    const deleteUser = await PostUser.findOneAndDelete({ _id: userId });
     console.log(userId);
 
     res.status(200).json(deleteUser);
