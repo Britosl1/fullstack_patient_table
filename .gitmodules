@@ -1,0 +1,3 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/Britosl1/fullstack_patient_table_Front.git
