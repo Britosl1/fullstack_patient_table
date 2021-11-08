@@ -29,8 +29,6 @@ $ npm install
 - **[Jest]**
 
 ## 🦸 Autor
-
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/29411637?s=460&u=61f735732a7a599dc45bb21a7a64cf46a1a7d563&v=4" width="100px;" alt="Profile Image"/>
  <br />
  <sub>
   <a href="https://www.linkedin.com/in/lucas-c-brito/" title="Linkedin" target="_blank">
